@@ -1,18 +1,19 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
-    Created on : Jun 13, 2016, 12:21:29 PM
-    Author     : ntagliasacchi
+    Created on : Mar 3, 2017, 2:10:45 AM
+    Author     : quantumDrop
 */
 
-td{
-    border: solid 1px black; 
-    width: 20%; 
-    text-align: center;
+body{
+    margin: 0 !important;
 }
-tr:hover{
-    background-color: aliceblue;
+#banner{
+    background-color: rgb(65, 64, 66);
+    color: blueviolet;
+    font-size: 50px;
+    height: 50px;
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+
+    
 }
