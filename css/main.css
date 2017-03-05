@@ -1,0 +1,86 @@
+/* 
+    Created on : Mar 4, 2017, 4:05:12 PM
+    Author     : quantumDrop
+*/
+html {
+  height: 100%;
+}
+body {
+  margin: 0 !important;
+}
+p {
+  color: #95fbf8;
+}
+a {
+  color: inherit !important;
+}
+.banner {
+  background-color: #414042;
+  color: #95fbf8;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  height: 50px;
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+}
+.typingBannerText {
+  display: inline-block;
+}
+.typed-cursor {
+  -moz-animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  color: white;
+  opacity: 1;
+}
+/*@keyframes {
+    blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+}*/
+/*@-webkit-keyframes {
+    blink {
+        0% { opacity:1; }
+    }
+}
+@-moz-keyframes {
+    blink {
+        0% { opacity:1; }
+    }
+}*/
+.content {
+  background-color: black;
+}
+.footer {
+  background-color: #414042;
+  height: 4em;
+  line-height: 4em;
+  text-align: center;
+}
+.fa-stack-fix {
+  width: 4em !important;
+}
+.secondaryColorIcon {
+  color: #95fbf8;
+}
+.tooltip {
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  background-color: #414042;
+  border-radius: 6px;
+  color: #95fbf8;
+  font-size: initial;
+  padding: 5px;
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/*# sourceMappingURL=main.css.map */
