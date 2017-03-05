@@ -2,8 +2,11 @@
     Created on : Mar 4, 2017, 4:05:12 PM
     Author     : quantumDrop
 */
-@color0: #95fbf8;  
-@color1: rgb(65, 64, 66);
+@secondaryColor: #95fbf8;  
+@primaryColor: rgb(65, 64, 66);
+@imgBgColor: yellow;
+@textBgColor: brown;
+@imageSize: 110px;
 
 
 html {
@@ -13,21 +16,20 @@ body {
     margin: 0 !important;
 }
 p {
-    color: @color0;
+    color: @secondaryColor;
 }
 a {
     color: inherit !important;
     text-decoration: none;
 } 
 .banner {
-    background-color: @color1;
-    color: @color0;
+    background-color: @primaryColor;
+    color: @secondaryColor;
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
     height: 50px;
     padding: 50px;
     text-align: center;
-    width: 100%;
 }
 .typingBannerText {
     display: inline-block;
@@ -57,13 +59,12 @@ a {
     }
 }*/
 .content {
-    background-color: @color1;
-    width: 100%;
+    background-color: @primaryColor;
     padding-left: 50px;
     padding-right: 50px;
 }
 .footer {
-    background-color: @color1;
+    background-color: @primaryColor;
     height: 4em;
     line-height: 4em;
     text-align: center;
@@ -72,14 +73,14 @@ a {
     width: 4em !important;
 }
 .secondaryColorIcon {
-    color: @color0;
+    color: @secondaryColor;
 }
 .tooltip {
     display: inline-block;
     .tooltiptext {
         background-color: rgb(65,64,66);
         border-radius: 6px;
-        color: @color0;
+        color: @secondaryColor;
         font-size: initial;
         padding: 5px;
         position: absolute;
@@ -93,4 +94,31 @@ a {
         }
     }
 }
+
+.contentRowContainer{
+    
+}
+.leftImage{
+    float:left;
+}
+.rightImage{
+    float: right;
+}
+.imageFormat{
+    background-color: @imgBgColor;
+    outline: solid 1px black;
+    padding: 15px;
+    margin: 15px;
+    width: @imageSize;
+    height: @imageSize;    
+}
+.textContainer{
+    background-color: @textBgColor;
+    color: @secondaryColor;
+    width: 100%;
+    padding: 15px;
+    min-height: @imageSize + 30px;
+}
+
+
 
