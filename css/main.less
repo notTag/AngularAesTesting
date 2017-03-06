@@ -2,11 +2,12 @@
     Created on : Mar 4, 2017, 4:05:12 PM
     Author     : quantumDrop
 */
-@secondaryColor: #95fbf8;  
 @primaryColor: rgb(65, 64, 66);
+@secondaryColor: #95fbf8;  
 @imgBgColor: yellow;
-@textBgColor: brown;
-@imageSize: 110px;
+/*@textBgColor: brown;*/
+@textBgColor: @primaryColor;
+@squareImageSize: 140px;
 
 
 html {
@@ -14,6 +15,7 @@ html {
 }
 body {
     margin: 0 !important;
+    background-color: @primaryColor;
 }
 p {
     color: @secondaryColor;
@@ -41,23 +43,17 @@ a {
     color: white;
     opacity: 1;
 }
-/*@keyframes {
-    blink {
+@keyframes blink {
         0% { opacity:1; }
         50% { opacity:0; }
         100% { opacity:1; }
-    }
-}*/
-/*@-webkit-keyframes {
-    blink {
-        0% { opacity:1; }
-    }
 }
-@-moz-keyframes {
-    blink {
+@-webkit-keyframes blink {
         0% { opacity:1; }
-    }
-}*/
+}
+@-moz-keyframes blink {
+        0% { opacity:1; }
+}
 .content {
     background-color: @primaryColor;
     padding-left: 50px;
@@ -68,6 +64,7 @@ a {
     height: 4em;
     line-height: 4em;
     text-align: center;
+    clear: left;
 }
 .fa-stack-fix {
     width: 4em !important;
@@ -96,7 +93,6 @@ a {
 }
 
 .contentRowContainer{
-    
 }
 .leftImage{
     float:left;
@@ -107,16 +103,24 @@ a {
 .imageFormat{
     background-color: @imgBgColor;
     outline: solid 1px black;
-    padding: 15px;
+    padding: 0px;
     margin: 15px;
-    width: @imageSize;
-    height: @imageSize;    
+    width: @squareImageSize;
+    height: @squareImageSize;    
 }
+.imageDimensions{
+    width: 100%;
+    height: 100%;
+}
+
 .textContainer{
     background-color: @textBgColor;
     color: @secondaryColor;
     padding: 15px;
-    min-height: @imageSize + 30px;
+    text-align: justify;
+    min-height: @squareImageSize;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 
