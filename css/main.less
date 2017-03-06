@@ -8,6 +8,8 @@
 /*@textBgColor: brown;*/
 @textBgColor: @primaryColor;
 @squareImageSize: 140px;
+@pacmanSize: 25px;
+@pacmanColor: yellow;
 
 
 html {
@@ -32,9 +34,37 @@ a {
     height: 50px;
     padding: 50px;
     text-align: center;
+    display: inline-flex;
 }
 .typingBannerText {
     display: inline-block;
+}
+
+.pacmanRight {
+    width: 0px;
+    height: 0px;
+    animation: pacmanRightEat 0.2s infinite;
+    /*border-right: @pacmanSize solid transparent;*/
+    border-top: @pacmanSize solid @pacmanColor;
+    border-left: @pacmanSize solid @pacmanColor;
+    border-bottom: @pacmanSize solid @pacmanColor;
+    border-top-left-radius: @pacmanSize;
+    border-top-right-radius: @pacmanSize;
+    border-bottom-left-radius: @pacmanSize;
+    border-bottom-right-radius: @pacmanSize;
+}
+.pacmanLeft {
+    width: 0px;
+    height: 0px;
+    border-right: @pacmanSize solid @pacmanColor;
+    border-top: @pacmanSize solid @pacmanColor;
+    border-left: @pacmanSize solid transparent;
+    animation: pacmanLeftEat .2s infinite;
+    border-bottom: @pacmanSize solid @pacmanColor;
+    border-top-left-radius: @pacmanSize;
+    border-top-right-radius: @pacmanSize;
+    border-bottom-left-radius: @pacmanSize;
+    border-bottom-right-radius: @pacmanSize;
 }
 .typed-cursor {
     -moz-animation: blink 0.7s infinite;
@@ -43,7 +73,19 @@ a {
     color: white;
     opacity: 1;
 }
-@keyframes blink {
+@keyframes pacmanRightEat{
+     0% { border-right: @pacmanSize solid transparent; }
+    50% { border-right: @pacmanSize solid @pacmanColor; }
+    85% { border-right: @pacmanSize solid @pacmanColor; }
+    100% { border-right: @pacmanSize solid transparent; }
+}
+@keyframes pacmanLeftEat{
+     0% { border-left: @pacmanSize solid transparent; }
+    50% { border-left: @pacmanSize solid @pacmanColor; }
+    85% { border-left: @pacmanSize solid @pacmanColor; }
+    100% { border-left: @pacmanSize solid transparent; }
+}
+/*@keyframes blink {
         0% { opacity:1; }
         50% { opacity:0; }
         100% { opacity:1; }
@@ -53,7 +95,7 @@ a {
 }
 @-moz-keyframes blink {
         0% { opacity:1; }
-}
+}*/
 .content {
     background-color: @primaryColor;
     padding-left: 50px;
