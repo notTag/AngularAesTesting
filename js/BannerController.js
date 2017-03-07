@@ -2,7 +2,7 @@ angular.module('app').controller('BannerCtlr', function ($scope) {
     $(function () {
         $(".typingBannerText").typed({
             strings: ["nicktag.tech is currently under Maintenance. ", "Nick Tagliasacchi is getting ready for hire! ", "Nick Tagliasacchi "],
-            typeSpeed: 20,
+            typeSpeed: 50,
             loop: false,
             loopCount: 2,
             cursorChar: "<div id=\"pacman\" class=\"pacmanRight\"></div>",
@@ -16,4 +16,16 @@ angular.module('app').controller('BannerCtlr', function ($scope) {
             }
         });
     });
+
+    $scope.customer = {
+        name: 'Naomi',
+        address: '1600 Amphitheatre'
+    };
+
+
+})
+.directive('myCustomer', function() {
+  return {
+    templateUrl: '.html'
+  };
 });

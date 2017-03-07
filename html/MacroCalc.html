@@ -1,0 +1,17 @@
+<div ng-controller="MacroCtrl" class="textColor">
+    <div>
+        Body Weight:
+        <input ng-model="bodyWeight">{{bodyWeight}}
+    </div>
+    <div>
+        Caloric Maintenance:
+        <input ng-model="caloricMaintenance">{{caloricMaintenance}}
+    </div>
+    <button ng-click='calculateMacros()' class='plainButton'>Calculate Macros</button>
+    
+    
+    <br>Protein: {{protein}}g = {{proCals}}cals
+    <br>Carbs: {{carbs}}g = {{carbCals}}cals
+    <br>Fats: {{fats}}g = {{fatCals}}cals
+</div>
+

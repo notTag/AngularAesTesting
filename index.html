@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
         <!--<script src="https://code.angularjs.org/1.4.8/angular.js"></script>-->
-        <script src="lib/angular1.4.8.js"></script>      
+        <script src="lib/angular1.4.8.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
         <script src="lib/less.min.js"></script>    
         <script src="lib/angular-less.min.js"></script>
 
@@ -38,161 +39,66 @@
             <meta name="theme-color" content="#ffffff">-->
         <script src="js/app.js"></script>
         <script src="js/BannerController.js"></script>
+        <script src="js/EncryptController.js"></script>
+        <script src="js/BigIntFibonacciController.js"></script>
+        <script src="js/MacroController.js"></script>
 
-        <link rel="stylesheet" href="css/encryptionCSS.css">
-        <!--<link rel="stylesheet" href="css/mainCSS.css">-->
         <link rel="stylesheet/less" href="css/main.less">
+        <link rel="stylesheet/less" href="css/encryption.less">
 
         <title>NICK TAG</title>
     </head>
 
     <body>
-
         <div ng-controller="BannerCtlr" class="banner" id="top">
             <div class="typingBannerText"></div>
         </div>
         <div class="content">
-            <div class="contentRowContainer">
-                <div class="leftImage imageFormat">
-                    <img src="img/LegoSegway.jpg" alt="LegoSegway" class="imageDimensions">
-                </div>
-                <div class="textContainer"> 
-                    Alice In Wonderland - These words were followed by a very long silence, broken only by an  occasional exclamation of 'Hjckrrh!' from the Gryphon, and the constant  heavy sobbing of the Mock Turtle. Alice was very nearly getting up and  saying, 'Thank you, sir, for your interesting story,' but she could  not help thinking there MUST be more to come, so she sat still and said  nothing.
-
-                    'When we were little,' the Mock Turtle went on at last, more calmly,  though still sobbing a little now and then, 'we went to school in the  sea. The master was an old Turtle&mdash;we used to call him Tortoise&mdash;'
-
-                    'Why did you call him Tortoise, if he wasn't one?' Alice asked.
-
-                    'We called him Tortoise because he taught us,' said the Mock Turtle  angrily: 'really you are very dull!'
-
-                    'You ought to be ashamed of yourself for asking such a simple question,'  added the Gryphon; and then they both sat silent and looked at poor  Alice, who felt ready to sink into the earth. At last the Gryphon said  to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!'  and he went on in these words:
-
-                    'Yes, we went to school in the sea, though you mayn't believe it&mdash;'
-
-                    'I never said I didn't!' interrupted Alice.
-
-                    'You did,' said the Mock Turtle.
-
-                    'Hold your tongue!' added the Gryphon, before Alice could speak again.  The Mock Turtle went on.
-
-                    'We had the best of educations&mdash;in fact, we went to school every day&mdash;'
-                </div>
-            </div>
-            <!--<br>-->
-            <!--<br>-->
-            <div class="contentRowContainer">
-                <div class="rightImage imageFormat">
-                    <img src="img/LegoSegway.jpg" alt="LegoSegway" class="imageDimensions">
-                </div>
-                <div class="textContainer">
-                    Moby Dick - "What are you jabbering about, shipmate?" said I.
-
-                    "HE'S got enough, though, to make up for all deficiencies of that sort in other chaps," abruptly said the stranger, placing a nervous emphasis upon the word HE.
-
-                    "Queequeg," said I, "let's go; this fellow has broken loose from somewhere; he's talking about something and somebody we don't know."
-
-                    "Stop!" cried the stranger. "Ye said true&mdash;ye hav'n't seen Old Thunder yet, have ye?"
-
-                    "Who's Old Thunder?" said I, again riveted with the insane earnestness of his manner.
-
-                    "Captain Ahab."
-
-                    "What! the captain of our ship, the Pequod?"
-
-                    "Aye, among some of us old sailor chaps, he goes by that name. Ye hav'n't seen him yet, have ye?"
-
-                    "No, we haven't. He's sick they say, but is getting better, and will be all right again before long."
-
-                    "All right again before long!" laughed the stranger, with a solemnly derisive sort of laugh. "Look ye; when Captain Ahab is all right, then this left arm of mine will be all right; not before."
-                </div>
-
-            </div>
-
-            <!--<br>-->
-            <!--<br>-->
-            <div class="contentRowContainer">
-                <div class="leftImage imageFormat">
-                    <img src="img/LegoSegway.jpg" alt="LegoSegway" class="imageDimensions">
-                </div>
-                <div class="textContainer">
-                    The War of the Worlds - "That's good!" said I.  "They will get one fair shot, at any rate."
-
-                    The artilleryman hesitated at the gate.
-
-                    "I shall go on," he said.
-
-                    Farther on towards Weybridge, just over the bridge, there were a number of men in white fatigue jackets throwing up a long rampart, and more guns behind.
-
-                    "It's bows and arrows against the lightning, anyhow," said the artilleryman.  "They 'aven't seen that fire-beam yet."
-
-                    The officers who were not actively engaged stood and stared over the treetops southwestward, and the men digging would stop every now and again to stare in the same direction.
-
-                    Byfleet was in a tumult; people packing, and a score of hussars, some of them dismounted, some on horseback, were hunting them about. Three or four black government waggons, with crosses in white circles, and an old omnibus, among other vehicles, were being loaded in the village street.  There were scores of people, most of them sufficiently sabbatical to have assumed their best clothes.  The soldiers were having the greatest difficulty in making them realise the gravity of their position.  We saw one shrivelled old fellow with a huge box and a score or more of flower pots containing orchids, angrily expostulating with the corporal who would leave them behind. I stopped and gripped his arm.
-                </div>
-
-                <!--<br>-->
-            </div>
-
-            <div class="contentRowContainer">
-                <div class="rightImage imageFormat">
-                    <img src="img/LegoSegway.jpg" alt="LegoSegway" class="imageDimensions">
-                </div>
-                <div class="textContainer"> 
-                    Alice In Wonderland - These words were followed by a very long silence, broken only by an  occasional exclamation of 'Hjckrrh!' from the Gryphon, and the constant  heavy sobbing of the Mock Turtle. Alice was very nearly getting up and  saying, 'Thank you, sir, for your interesting story,' but she could  not help thinking there MUST be more to come, so she sat still and said  nothing.
-
-                    'When we were little,' the Mock Turtle went on at last, more calmly,  though still sobbing a little now and then, 'we went to school in the  sea. The master was an old Turtle&mdash;we used to call him Tortoise&mdash;'
-
-                    'Why did you call him Tortoise, if he wasn't one?' Alice asked.
-
-                    'We called him Tortoise because he taught us,' said the Mock Turtle  angrily: 'really you are very dull!'
-
-                    'You ought to be ashamed of yourself for asking such a simple question,'  added the Gryphon; and then they both sat silent and looked at poor  Alice, who felt ready to sink into the earth. At last the Gryphon said  to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!'  and he went on in these words:
-
-                    'Yes, we went to school in the sea, though you mayn't believe it&mdash;'
-
-                    'I never said I didn't!' interrupted Alice.
-
-                    'You did,' said the Mock Turtle.
-
-                    'Hold your tongue!' added the Gryphon, before Alice could speak again.  The Mock Turtle went on.
-
-                    'We had the best of educations&mdash;in fact, we went to school every day&mdash;'
-                </div>
-            </div>
+            <a href="#ntst">
+                <strong>NTST</strong>
+            </a>
+            <a href="#AngularAES">
+                <strong>angularAes</strong>
+            </a>
+            <a href="#/">
+                <strong>BigIntFibonacci</strong>
+            </a>
+            <a href="#macro">
+                <strong>Macro Calculator</strong>
+            </a>
+            
+            <div class="ng-view"></div>
         </div>
         <div class="footer">
             <a href="https://www.github.com/notTag" title="github.com/notTag"  target="_blank">
                 <span class="fa-stack fa-stack-fix">
-                    <i class="fa fa-square fa-stack-1x fa-3x secondaryColorIcon"></i>
-                    <i class="fa fa-github-square fa-stack-1x fa-3x"></i>
+                    <i class="fa fa-square fa-stack-1x fa-4x secondaryColorIcon"></i>
+                    <i class="fa fa-github-square fa-stack-1x fa-4x"></i>
                 </span>
             </a>
-            <!--<i class="fa fa-3x fa-square tooltip" aria-hidden="true">
+            <!--<i class="fa fa-4x fa-square tooltip" aria-hidden="true">
                 <span class="tooltiptext">nick.tagliasacchi@gmail.com</span>
             </i>-->
             <a href="mailto:nick.tagliasacchi@gmail.com?Subject=Loved%20your%20site!" title="nick.tagliasacchi@gmail.com">
                 <span class="fa-stack fa-stack-fix">
-                    <i class="fa fa-square fa-stack-1x fa-3x "></i>
-                    <i class="fa fa-envelope-o fa-stack-1x fa-2x secondaryColorIcon"></i>
+                    <i class="fa fa-square fa-stack-1x fa-4x "></i>
+                    <i class="fa fa-envelope-o fa-stack-1x fa-3x secondaryColorIcon"></i>
                 </span>
             </a>
             <a href="https://www.linkedin.com/in/nicktagliasacchi" title="in/nickTagliasacchi">
                 <span class="fa-stack fa-stack-fix">
-                    <i class="fa fa-square fa-stack-1x fa-3x secondaryColorIcon"></i>
-                    <i class="fa fa-linkedin-square fa-stack-1x fa-3x"></i>
+                    <i class="fa fa-square fa-stack-1x fa-4x secondaryColorIcon"></i>
+                    <i class="fa fa-linkedin-square fa-stack-1x fa-4x"></i>
                 </span>
             </a>
             <a href="#top" title="Back to top">
                 <div class="fa-stack fa-stack-fix">
-                    <i class="fa fa-square fa-stack-1x fa-3x"></i>
-                    <i class="fa fa-arrow-up fa-stack-1x fa-2x secondaryColorIcon"></i>
+                    <i class="fa fa-square fa-stack-1x fa-4x"></i>
+                    <i class="fa fa-arrow-up fa-stack-1x fa-3x secondaryColorIcon"></i>
                 </div>
             </a>
-            <!--          <i class="fa fa-linkedin-square fa-stick-1x fa-3x tooltip" aria-hidden="true">
-                      <span class="tooltiptext">in/nickTagliasacchi</span>
-                  </i>-->
         </div>
-
+        <!--<div ng-include="'html/AngularAESTest.html'"></div>-->
     </body>
 
 </html>

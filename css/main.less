@@ -4,13 +4,14 @@
 */
 @primaryColor: rgb(65, 64, 66);
 @secondaryColor: #95fbf8;  
-@imgBgColor: yellow;
-/*@textBgColor: brown;*/
+@imgBgColor: rgb(245,147,49);
 @textBgColor: @primaryColor;
 @squareImageSize: 140px;
 @pacmanSize: 25px;
 @pacmanColor: yellow;
-
+@pagePadding: 50px;
+@pacmanAnimationDelay: .4s;
+@pacmanAnimationDuration: 15;
 
 html {
     height: 100%;
@@ -18,6 +19,9 @@ html {
 body {
     margin: 0 !important;
     background-color: @primaryColor;
+}
+.textColor{
+    color: @secondaryColor;
 }
 p {
     color: @secondaryColor;
@@ -32,7 +36,7 @@ a {
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
     height: 50px;
-    padding: 50px;
+    padding: @pagePadding;
     text-align: center;
     display: inline-flex;
 }
@@ -43,7 +47,7 @@ a {
 .pacmanRight {
     width: 0px;
     height: 0px;
-    animation: pacmanRightEat 0.2s infinite;
+    animation: pacmanRightEat @pacmanAnimationDelay @pacmanAnimationDuration;
     /*border-right: @pacmanSize solid transparent;*/
     border-top: @pacmanSize solid @pacmanColor;
     border-left: @pacmanSize solid @pacmanColor;
@@ -56,35 +60,33 @@ a {
 .pacmanLeft {
     width: 0px;
     height: 0px;
+    animation: pacmanLeftEat @pacmanAnimationDelay @pacmanAnimationDuration;
     border-right: @pacmanSize solid @pacmanColor;
     border-top: @pacmanSize solid @pacmanColor;
     border-left: @pacmanSize solid transparent;
-    animation: pacmanLeftEat .2s infinite;
     border-bottom: @pacmanSize solid @pacmanColor;
     border-top-left-radius: @pacmanSize;
     border-top-right-radius: @pacmanSize;
     border-bottom-left-radius: @pacmanSize;
     border-bottom-right-radius: @pacmanSize;
 }
-.typed-cursor {
-    -moz-animation: blink 0.7s infinite;
-    -webkit-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-    color: white;
-    opacity: 1;
-}
 @keyframes pacmanRightEat{
      0% { border-right: @pacmanSize solid transparent; }
     50% { border-right: @pacmanSize solid @pacmanColor; }
-    85% { border-right: @pacmanSize solid @pacmanColor; }
     100% { border-right: @pacmanSize solid transparent; }
 }
 @keyframes pacmanLeftEat{
      0% { border-left: @pacmanSize solid transparent; }
     50% { border-left: @pacmanSize solid @pacmanColor; }
-    85% { border-left: @pacmanSize solid @pacmanColor; }
     100% { border-left: @pacmanSize solid transparent; }
 }
+/*.typed-cursor {
+    -moz-animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+    color: white;
+    opacity: 1;
+}*/
 /*@keyframes blink {
         0% { opacity:1; }
         50% { opacity:0; }
@@ -98,8 +100,8 @@ a {
 }*/
 .content {
     background-color: @primaryColor;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: @pagePadding;
+    padding-right: @pagePadding;
 }
 .footer {
     background-color: @primaryColor;
@@ -135,6 +137,8 @@ a {
 }
 
 .contentRowContainer{
+    width: 45%;
+    display: inline-block;
 }
 .leftImage{
     float:left;
@@ -164,6 +168,8 @@ a {
     margin-right: 5px;
     margin-bottom: 5px;
 }
-
-
+.plainButton{
+    border: 0;
+    background-color: white;
+}
 

@@ -1,10 +1,12 @@
-<table>
-    <tr>
-        <th>index</th>
-        <th>Fib(n)</th>
-    </tr>
-    <tr ng-repeat="i in getNumber(number) track by $index">
-        <td>{{$index + 1}}</td>
-        <td>{{BigIntegerFibonacciBottomUp($index + 1)}}</td>
-    </tr>
-</table>
+<div ng-controller="BigIntFibonacciCtrl" class="textColor">
+    <table>
+        <tr>
+            <th>index</th>
+            <th>Fib(n)</th>
+        </tr>
+        <tr ng-repeat="i in getNumber(number) track by $index">
+            <td>{{$index + 1}}</td>
+            <td>{{BigIntegerFibonacciBottomUp($index + 1)}}</td>
+        </tr>
+    </table>
+</div>
