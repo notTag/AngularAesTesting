@@ -6,6 +6,7 @@
 @secondaryColor: #95fbf8;  
 @imgBgColor: rgb(245,147,49);
 @textBgColor: @primaryColor;
+@secondaryBgColor: #1d1d1d;
 @squareImageSize: 140px;
 @pacmanSize: 25px;
 @pacmanColor: yellow;
@@ -170,6 +171,13 @@ a {
 }
 .plainButton{
     border: 0;
-    background-color: white;
+    background-color: @secondaryBgColor;
+    color: @secondaryColor;
+    font-size: 1em;
+}
+.plainButton:hover{
+    background-color: @secondaryColor;
+    color: @secondaryBgColor;
+    outline: solid 1px @secondaryBgColor;
 }
 

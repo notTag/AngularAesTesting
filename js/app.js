@@ -4,13 +4,16 @@ var app = angular.module('app', ['ngLess', "ngRoute", 'mdo-angular-cryptography'
 app.config(function ($routeProvider, $cryptoProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "html/BigIntFibonacci.html"
+        templateUrl : "html/ntst.html"
     })
     .when("/ntst", {
         templateUrl : "html/ntst.html"
     })
     .when("/AngularAES", {
         templateUrl : "html/AngularAESTest.html"
+    })
+    .when("/BigIntFibonacci", {
+        templateUrl : "html/BigIntFibonacci.html"
     })
     .when("/macro", {
         templateUrl : "html/MacroCalc.html"
