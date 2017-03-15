@@ -17,6 +17,9 @@ app.config(function ($routeProvider, $cryptoProvider) {
     })
     .when("/macro", {
         templateUrl : "html/MacroCalc.html"
+    })
+    .when("/conway", {
+        templateUrl : "html/ConwayGameOfLife.html"
     });
 
     $cryptoProvider.setCryptographyKey('ABCD123');
