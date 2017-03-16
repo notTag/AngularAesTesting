@@ -1,1 +1,21 @@
-<div ng-controller="ConwayCtlr" class="conwayContainer">{{title}}</div>
+<div ng-controller="ConwayCtlr" class="conwayContainer">
+    <div ng-init="conwayMain('right-down-glider')" id="board" class="centerDiv"></div>
+    <div class="controlsContainer">
+        <div class="centerDiv">
+            <label class="basicLabel">Width</label>
+            <input type="text" maxlength="100" id="xSize" class="basicInputBox" value="10"/>
+            <label class="basicLabel">Height</label>
+            <input type="text" maxlength="100" id="ySize" class="basicInputBox" value="10"/>
+            <button class="basicButton" ng-click="setGridSize()">Set Size</button>
+        </div>
+        </br>
+        <div class="centerDiv">
+            <label class="basicLabel">Delay(ms)</label>
+            <input type="text" maxlength="30000" id="speedInput" class="basicInputBox" value="100"/>
+            <button class="squareButton" ng-click="startAnimation(1)"><i class="fa fa-2x fa-play" aria-hidden="true"></i></button>
+            <button class="squareButton" ng-click="stopAnimation()"><i class="fa fa-2x fa-pause" aria-hidden="true"></i></button>
+            <select class="basicSelectBox" id="elementTypeDropDown" ng-change="conwayMain(gliderType.value)" ng-model="gliderType.value" ng-options="g for g in gliderType.values"></select>
+        </div>
+    </div>
+
+</div>

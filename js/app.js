@@ -9,10 +9,10 @@ app.config(function ($routeProvider, $cryptoProvider) {
     .when("/ntst", {
         templateUrl : "html/ntst.html"
     })
-    .when("/AngularAES", {
+    .when("/angularAES", {
         templateUrl : "html/AngularAESTest.html"
     })
-    .when("/BigIntFibonacci", {
+    .when("/bigIntFibonacci", {
         templateUrl : "html/BigIntFibonacci.html"
     })
     .when("/macro", {
