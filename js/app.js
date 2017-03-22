@@ -1,7 +1,7 @@
 /* global angular */
 var app = angular.module('app', ['ngLess', "ngRoute", 'mdo-angular-cryptography']);
 
-app.config(function ($routeProvider, $cryptoProvider) {
+app.config(function ($routeProvider, $cryptoProvider, $locationProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "html/ntst.html"
@@ -22,6 +22,7 @@ app.config(function ($routeProvider, $cryptoProvider) {
         templateUrl : "html/ConwayGameOfLife.html"
     });
 
+    $locationProvider.html5Mode(true); 
     $cryptoProvider.setCryptographyKey('ABCD123');
 });
 

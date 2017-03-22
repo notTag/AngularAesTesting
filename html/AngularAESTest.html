@@ -1,25 +1,26 @@
-
-<div ng-controller="EncryptCtrl" class="textColor">
-    <h1>AngularJS AES Testing</h1>
-    <h2>Elements to Encrypt</h2>
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Date Actual</th>
-            <th>Date Encrypted</th>
-            <th>Date Decrypted</th>
-            <th>Key</th>
-        </tr>
-        <tr ng-repeat="i in elements">
-            <td>{{i.name}}</td>
-            <td>{{i.dateActual}}</td>
-            <td>{{i.dateEncrypted}}</td>
-            <td>{{i.dateDecrypted}}</td>
-            <td>{{i.key}}</td>
-        </tr>
-    <!--	<tr>
-        <td>{{encrypted}}</td>
-        <td>{{decrypted}}</td>
-    </tr>-->
-    </table>
+<div class="viewContainer">
+    <div ng-controller="EncryptCtrl" class="textColor">
+        <h1>AngularJS AES Testing</h1>
+        <h2>Elements to Encrypt</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Date Actual</th>
+                <th>Date Encrypted</th>
+                <th>Date Decrypted</th>
+                <th>Key</th>
+            </tr>
+            <tr ng-repeat="i in elements">
+                <td>{{i.name}}</td>
+                <td>{{i.dateActual}}</td>
+                <td>{{i.dateEncrypted}}</td>
+                <td>{{i.dateDecrypted}}</td>
+                <td>{{i.key}}</td>
+            </tr>
+            <!--	<tr>
+                <td>{{encrypted}}</td>
+                <td>{{decrypted}}</td>
+            </tr>-->
+        </table>
+    </div>
 </div>

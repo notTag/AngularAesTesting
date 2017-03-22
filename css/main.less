@@ -19,7 +19,17 @@ html {
 }
 body {
     margin: 0 !important;
-    background-color: @primaryColor;
+    background-color: @primaryColor !important;
+/*    height: 100%;
+    width: 100%;*/
+}
+.texture {
+    background: url(img/diagonalStripe.png) repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0
 }
 .textColor{
     color: @secondaryColor;
@@ -32,7 +42,7 @@ a {
     text-decoration: none;
 } 
 .banner {
-    background-color: @primaryColor;
+    /*background-color: @primaryColor;*/
     color: @secondaryColor;
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
@@ -100,12 +110,13 @@ a {
         0% { opacity:1; }
 }*/
 .content {
-    background-color: @primaryColor;
+    /*background-color: @primaryColor;*/
+    text-align: center;
     padding-left: @pagePadding;
     padding-right: @pagePadding;
 }
 .footer {
-    background-color: @primaryColor;
+    /*background-color: @primaryColor;*/
     height: 4em;
     line-height: 4em;
     text-align: center;
@@ -136,10 +147,13 @@ a {
         }
     }
 }
-
+.viewContainer{
+    padding:5px;
+}
 .contentRowContainer{
     width: 45%;
     display: inline-block;
+    vertical-align: top;
 }
 .leftImage{
     float:left;
@@ -184,4 +198,3 @@ a {
     color: @secondaryBgColor;
     outline: solid 1px @secondaryBgColor;
 }
-

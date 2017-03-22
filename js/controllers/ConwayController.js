@@ -252,4 +252,45 @@ angular.module('app').controller('ConwayCtlr', function ($scope) {
         createGrid(board);
         drawboard(board);
     };
+    
+
+//    $scope.blinkerBoard = function () {
+//        board[1][0] = 1;
+//        board[1][1] = 1;
+//        board[1][2] = 1;
+//    };
+//    $scope.gliderBoard = function () {
+//        board[2][0] = 1;
+//        board[2][1] = 1;
+//        board[2][2] = 1;
+//        board[1][2] = 1;
+//        board[0][1] = 1;
+//    };
+//    $scope.reverseGliderBoard = function () {
+//        board[0][0] = 1;
+//        board[0][1] = 1;
+//        board[0][2] = 1;
+//        board[2][1] = 1;
+//        board[1][2] = 1;
+//    };
+//    $scope.flowerBoard = function () {
+//        board[4][6] = 1;
+//        board[5][6] = 1;
+//        board[6][6] = 1;
+//        board[7][6] = 1;
+//        board[8][6] = 1;
+//        board[9][6] = 1;
+//        board[10][6] = 1;
+//        board[4][7] = 1;
+//        board[6][7] = 1;
+//        board[8][7] = 1;
+//        board[10][7] = 1;
+//        board[4][8] = 1;
+//        board[5][8] = 1;
+//        board[6][8] = 1;
+//        board[7][8] = 1;
+//        board[8][8] = 1;
+//        board[9][8] = 1;
+//        board[10][8] = 1;
+//    };
 });

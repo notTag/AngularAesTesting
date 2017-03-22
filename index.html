@@ -34,51 +34,55 @@
         <link rel="icon" type="image/png" sizes="96x96" href="nt-favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="nt-favicon/favicon-16x16.png">
         <link rel="manifest" href="nt-favicon/manifest.json">
-        <!--    <meta name="msapplication-TileColor" content="#ffffff">
+        <!--    <meta name="msapplication-TileColor" content="ffffff">
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-            <meta name="theme-color" content="#ffffff">-->
+            <meta name="theme-color" content="ffffff">-->
         <script src="js/app.js"></script>
-        <script src="js/BannerController.js"></script>
-        <script src="js/EncryptController.js"></script>
-        <script src="js/BigIntFibonacciController.js"></script>
-        <script src="js/MacroController.js"></script>
-        <script src="js/ConwayController.js"></script>
+        <script src="js/controllers/BannerController.js"></script>
+        <script src="js/controllers/EncryptController.js"></script>
+        <script src="js/controllers/BigIntFibonacciController.js"></script>
+        <script src="js/controllers/MacroController.js"></script>
+        <script src="js/controllers/ConwayController.js"></script>
 
+        <base href="http://localhost:8383/NickTag/">
+        <!--<base href="/">-->
+        
         <link rel="stylesheet/less" href="css/main.less">
         <link rel="stylesheet/less" href="css/conway.less">
         <link rel="stylesheet/less" href="css/encryption.less">
 
+        
         <title>NICK TAG</title>
     </head>
 
-    <body>
+    <body class="texture">
         <div ng-controller="BannerCtlr" class="banner" id="top">
             <div class="typingBannerText"></div>
         </div>
         <div class="content">
-            <a href="#ntst">
+            <a href="ntst">
                 <button class='plainButton'>
                     NTST
                 </button>
             </a>
-            <a href="#angularAES">
+            <a href="angularAES">
                 <button class='plainButton'>
                     AngularAes
                 </button>
                 
             </a>
-            <a href="#bigIntFibonacci">
+            <a href="bigIntFibonacci">
                 <button class='plainButton'>
                     BigIntFibonacci
                 </button>
                 
             </a>
-            <a href="#macro">
+            <a href="macro">
                 <button class='plainButton'>
                     Macro Calculator
                 </button>
             </a>
-            <a href="#conway">
+            <a href="conway">
                 <button class='plainButton'>
                     Conway's Game of Life
                 </button>
@@ -108,7 +112,7 @@
                     <i class="fa fa-linkedin-square fa-stack-1x fa-4x"></i>
                 </span>
             </a>
-<!--            <a href="#top" title="Back to top">
+<!--            <a href="top" title="Back to top">
                 <div class="fa-stack fa-stack-fix">
                     <i class="fa fa-square fa-stack-1x fa-4x"></i>
                     <i class="fa fa-arrow-up fa-stack-1x fa-3x secondaryColorIcon"></i>
