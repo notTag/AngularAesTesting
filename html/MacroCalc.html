@@ -11,9 +11,11 @@
         <button ng-click='calculateMacros()' class='plainButton'>Calculate Macros</button>
 
 
-        <br>Protein: {{protein}}g = {{proCals}}cals
-        <br>Carbs: {{carbs}}g = {{carbCals}}cals
-        <br>Fats: {{fats}}g = {{fatCals}}cals
+        <br>Protein: {{protein.val}}g = {{protein.cals}}cals
+        <br>Fats: {{fats.val}}g = {{fats.cals}}cals
+        <input type="range" ng-model="fats.mod">{{fats.mod}}%
+        <br>Carbs: {{carbs.val}}g = {{carbs.cals}}cals
+
     </div>
 </div>
 
