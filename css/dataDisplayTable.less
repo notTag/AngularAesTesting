@@ -3,14 +3,20 @@
     Author     : quantumDrop
 */
 @hoverColor: #1d1d1d;
+@tableBgColor: #414042;
 
-div > div > table {
+.largeTable {
     width: 100%;
+    background-color: @tableBgColor;
+    outline: solid 1px black;
 }
-td{
-    border: solid 1px black; 
+.largeTable > tbody > tr > td{
+    border-top: solid 1px black; 
     width: 20%; 
     /*text-align: center;*/
+}
+tr{
+    background-color: @tableBgColor;
 }
 tr:hover{
     background-color: @hoverColor;

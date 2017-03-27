@@ -4,7 +4,7 @@
 */
 @primaryColor: rgb(65, 64, 66);
 @secondaryColor: #95fbf8;  
-@imgBgColor: rgb(245,147,49);
+@imgBgColor: #66696d;
 @textBgColor: @primaryColor;
 @secondaryBgColor: #1d1d1d;
 @squareImageSize: 140px;
@@ -122,8 +122,14 @@ a {
     text-align: center;
     clear: left;
 }
+/*.ntstIcon:hover{
+    color: @secondaryColor;
+}*/
 .fa-stack-fix {
     width: 4em !important;
+}
+.fa-8x{
+    font-size: 8em !important;
 }
 .secondaryColorIcon {
     color: @secondaryColor;
@@ -162,6 +168,7 @@ a {
     float: right;
 }
 .imageFormat{
+    background: url(img/diagonalStripe.png);
     background-color: @imgBgColor;
     outline: solid 1px black;
     padding: 0px;
@@ -175,14 +182,20 @@ a {
 }
 
 .textContainer{
-    background-color: @textBgColor;
+    /*background-color: @textBgColor;*/
     color: @secondaryColor;
     padding: 15px;
     text-align: justify;
     min-height: @squareImageSize;
     margin-right: 5px;
     margin-bottom: 5px;
+    background-color: @textBgColor;
+    transition: background-color 1s ease-in-out;
 }
+.textContainer:hover{
+    background-color: #59585a;
+}
+
 .projectTitle{
     text-align: left !important;
     font-weight: 600;

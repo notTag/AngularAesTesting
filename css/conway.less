@@ -2,6 +2,9 @@
     Created on : Mar 15, 2017, 3:16:49 AM
     Author     : quantumDrop
 */
+@primaryColor: rgb(65, 64, 66);
+@secondaryColor: #95fbf8;  
+
 @cellDimension: 50px;
 @aliveColor: #73A1CA;
 @deadColor: #14181B;
@@ -49,6 +52,7 @@ br{
 }
 .centerDiv{
     text-align:center;	
+    padding-bottom: 5px;
 }
 .rowContainer{
     display: inline-flex;
@@ -69,7 +73,7 @@ br{
     border: none;
     vertical-align: text-top;
     background-color: #000000;
-    color: #95fbf8;
+    color: @secondaryColor;
     border: solid 1px #95fbf8;
 }
 .basicButton{
@@ -80,7 +84,7 @@ br{
 .squareButton{
     height: 30px;
     width: 40px;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 

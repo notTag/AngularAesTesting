@@ -1,10 +1,10 @@
 angular.module("app").controller('MacroCtrl', function($scope) {
-    $scope.bodyWeight;
-    $scope.caloricMaintenance;
+    $scope.bodyWeight = 0;
+    $scope.caloricMaintenance = 0;
     $scope.protein = {
         val: 0,
         cals: 0,
-        mod: 1,
+        mod: 100,
         calsPerGram: 4
     };
     $scope.fats = {
@@ -27,7 +27,8 @@ angular.module("app").controller('MacroCtrl', function($scope) {
     };
 
     $scope.calculateProtein = function () {
-        $scope.protein.val = $scope.bodyWeight * $scope.protein.mod;
+        console.log("Protein Slider Val: " + $scope.protein.mod / 100);
+        $scope.protein.val = $scope.bodyWeight * ($scope.protein.mod/100);
         $scope.protein.cals = $scope.protein.val * $scope.protein.calsPerGram;
         
         console.log("Protein: " + $scope.protein);

@@ -1,21 +1,66 @@
 <div class="viewContainer">
     <div ng-controller="MacroCtrl" class="textColor">
-        <div>
-            Body Weight:
-            <input ng-model="bodyWeight">{{bodyWeight}}
+        <div class="macroContainer">
+            <!--            <div class="macroElement">
+                            Body Weight:
+                            <input ng-model="bodyWeight">{{bodyWeight}}
+                        </div>
+                        <div class="macroElement">
+                            Caloric Maintenance:
+                            <input ng-model="caloricMaintenance">{{caloricMaintenance}}
+                        </div>
+                        <button ng-click='calculateMacros()' class='plainButton'>Calculate Macros</button>
+            
+            
+                        <br>Protein: {{protein.val}}g = {{protein.cals}}cals
+                        <input type="range" class="macroSlider" ng-model="protein.mod" min="0" max="200">{{protein.mod}}%
+                        <br>Fats: {{fats.val}}g = {{fats.cals}}cals
+                        <input type="range" class="macroSlider"  ng-model="fats.mod">{{fats.mod}}%
+                        <br>Carbs: {{carbs.val}}g = {{carbs.cals}}cals
+            -->
+            <!--.Fix later: lazy alignment using table.-->
+            <br>
+            <table class="macroTable">
+                <tr>
+
+                    <th>Body Weight:</th>
+                    <th><input ng-model="bodyWeight" class="macroInputBox"></th>
+                    <th>{{bodyWeight}} lbs</th>
+                    <th><button ng-click='calculateMacros()' class='plainButton'>Calculate Macros</button></th>
+                </tr>
+                <tr class="macroTableDivider">
+                    <th>Caloric Maintenance:</th>
+                    <th><input ng-model="caloricMaintenance" class="macroInputBox"></th>
+                    <th>{{caloricMaintenance}} cals</th>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="macroTable">
+                <tr>
+                    <td>Macro</td>
+                    <td>Grams</td>
+                    <td>Calories</td>
+                    <td>Modifier</td>
+                </tr>
+                <tr>
+                    <td>Protein: </td>
+                    <td>{{protein.val}} g</td>
+                    <td>{{protein.cals}} cals</td>
+                    <td><input type="range" class="macroSlider" ng-model="protein.mod" min="0" max="200">{{protein.mod}}%</td>
+                </tr>
+                <tr>  
+                    <td>Fats: </td>
+                    <td>{{fats.val}} g</td>
+                    <td>{{fats.cals}} cals</td>
+                    <td><input type="range" class="macroSlider"  ng-model="fats.mod">{{fats.mod}}%</td>
+                <tr>
+                    <td>Carbs: </td>
+                    <td>{{carbs.val}} g</td>
+                    <td>{{carbs.cals}} cals</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
-        <div>
-            Caloric Maintenance:
-            <input ng-model="caloricMaintenance">{{caloricMaintenance}}
-        </div>
-        <button ng-click='calculateMacros()' class='plainButton'>Calculate Macros</button>
-
-
-        <br>Protein: {{protein.val}}g = {{protein.cals}}cals
-        <br>Fats: {{fats.val}}g = {{fats.cals}}cals
-        <input type="range" ng-model="fats.mod">{{fats.mod}}%
-        <br>Carbs: {{carbs.val}}g = {{carbs.cals}}cals
-
     </div>
 </div>
 
