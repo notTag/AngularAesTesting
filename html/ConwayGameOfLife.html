@@ -3,6 +3,12 @@
         <div ng-init="conwayMain('right-down-glider')" id="board" class="centerDiv"></div>
         <div class="controlsContainer">
             <div class="centerDiv">
+                <label class="basicLabel">Cell Size</label>
+                <input type="range" min="13" max="100" ng-model="cellSize" ng-change="setCellSize()" value="50"/>
+                {{cellSize}}
+                <!--<button class="basicButton" ng-click="setCellSize()">Set Size</button>-->
+            </div>
+            <div class="centerDiv">
                 <label class="basicLabel">Width</label>
                 <input type="text" maxlength="100" id="xSize" class="basicInputBox" value="10"/>
                 <label class="basicLabel">Height</label>
@@ -12,7 +18,7 @@
             </br>
             <div class="centerDiv">
                 <label class="basicLabel">Delay(ms)</label>
-                <input type="text" maxlength="30000" id="speedInput" class="basicInputBox" value="100"/>
+                <input type="range" ng-model="speedInput" ng-change="startAnimation()" class="basicInputBox" value="100" min="0" max="200"/>
                 <button class="squareButton" ng-click="startAnimation(1)"><i class="fa fa-2x fa-play" aria-hidden="true"></i></button>
                 <button class="squareButton" ng-click="stopAnimation()"><i class="fa fa-2x fa-pause" aria-hidden="true"></i></button>
                 <select class="basicSelectBox" id="elementTypeDropDown" ng-change="conwayMain(gliderType.value)" ng-model="gliderType.value" ng-options="g for g in gliderType.values"></select>

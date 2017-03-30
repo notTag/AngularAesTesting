@@ -1,6 +1,8 @@
 angular.module('app').controller('ConwayCtlr', function ($scope) {
     $scope.title = "Conway Game Of Life";
-
+    $scope.cellSize = 50;
+    $scope.speedInput = 100;
+    
     var board;
     var nextBoard;
     var Animation = 0;
@@ -178,7 +180,10 @@ angular.module('app').controller('ConwayCtlr', function ($scope) {
 
     $scope.startAnimation = function() {
         // clearInterval(Animation);
-        var interval = parseInt(document.getElementById('speedInput').value);
+        
+        var interval = parseInt($scope.speedInput);
+        console.log("start animation: " + interval);
+//        var interval = parseInt(document.getElementById('speedInput').value);
         $scope.stopAnimation();
         if (typeof interval == 'number') {
             if (interval < 0)
@@ -207,7 +212,7 @@ angular.module('app').controller('ConwayCtlr', function ($scope) {
         return b;
     }
 
-    function setUpboardType(type) {
+    function setupBoardType(type) {
         if (type == "blinker") {
             blinkerBoard();
         } else if (type == "right-down-glider") {
@@ -222,6 +227,14 @@ angular.module('app').controller('ConwayCtlr', function ($scope) {
         xsize = document.getElementById('xSize').value;
         ysize = document.getElementById('ySize').value;
         $scope.conwayMain(document.getElementById('elementTypeDropDown').value);
+    };
+    
+    $scope.setCellSize = function(){
+        $(".aliveSquare").css("width", $scope.cellSize);
+        $(".aliveSquare").css("height", $scope.cellSize);
+        $(".deadSquare").css("width", $scope.cellSize);
+        $(".deadSquare").css("height", $scope.cellSize);
+        console.log("cell size" + $scope.cellSize);
     };
 
     function blinkerBoard() {
@@ -244,13 +257,31 @@ angular.module('app').controller('ConwayCtlr', function ($scope) {
         board[1][2] = 1;
     }
 
+    function flowerBoard() {
+        for(var i=0; i<7; i++){
+            for(var j=0; j<3; j++){
+                if((i == 1 && j == 1) || (i == 3 && j == 1) || (i == 5 && j == 1)){
+                    console.log(i + " " + j);
+                } else {
+                    board[i][j]=1;
+                }
+            }
+        }
+    };
+
+    $scope.$on('$routeChangeStart', function(next, current) { 
+       console.log("Navigating away from conway. Stop animation");
+       $scope.stopAnimation();
+     });
+
     $scope.conwayMain = function (boardType) {
         console.log(boardType);
         board = initBoard(board);
         nextBoard = initBoard(nextBoard);
-        setUpboardType(boardType);
+        setupBoardType(boardType);
         createGrid(board);
         drawboard(board);
+        $scope.setCellSize();
     };
     
 
