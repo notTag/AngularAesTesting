@@ -37,19 +37,29 @@ angular.module("app").controller('MacroCtrl', function($scope) {
         console.log("Fat Slider Val: " + $scope.fats.mod / 100);
         
         var fatGrams = $scope.bodyWeight * ($scope.fats.mod/100);
-        $scope.fats.val = Math.round(fatGrams*1000)/1000;
+        if(fatGrams > 0){
+            $scope.fats.val = Math.round(fatGrams*1000)/1000;
         
-        var fatCals = $scope.fats.val * $scope.fats.calsPerGram;
-        $scope.fats.cals = Math.round(fatCals*1000)/1000;
+            var fatCals = $scope.fats.val * $scope.fats.calsPerGram;
+            $scope.fats.cals = Math.round(fatCals*1000)/1000;
+        } else {
+            $scope.fats.val = 0;
+            $scope.fats.cals = 0;
+        }
         
-        console.log("Carbs: " + $scope.carbs);
+        
+        console.log("Fats: " + $scope.fats);
     };
     $scope.calculateCarbs = function () {
         var carbCals = $scope.caloricMaintenance - ($scope.protein.cals + $scope.fats.cals);
-        $scope.carbs.cals = Math.round(carbCals * 1000) / 1000;
+        if(carbCals > 0){
+            $scope.carbs.cals = Math.round(carbCals * 1000) / 1000;
+            $scope.carbs.val = $scope.carbs.cals / $scope.carbs.calsPerGram;
+        } else {
+            $scope.carbs.cals = 0;
+            $scope.carbs.val = 0;
+        }
         
-        $scope.carbs.val = $scope.carbs.cals / $scope.carbs.calsPerGram;
-        
-        console.log("Fats: " + $scope.fats);
+        console.log("Carbs: " + $scope.carbs);
     };
 });

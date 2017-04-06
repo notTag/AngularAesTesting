@@ -16,14 +16,18 @@
 @primaryColor: #cecece;
 @secondaryColor: #000000;
 @appBackgroundColor: rgb(65, 64, 66);
-@bannerFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 @bannerFontColor: white;
+@bannerFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font: 'helvetica', 'arial', 'sans-serif';
+@fontColor: #ffffff;
+@textBgColor: @primaryColor;
+
 @secondaryColorIcon: white;
 @buttonColor: #ffffff;
 @imgBgColor: #8f949a;
 
-@font: 'helvetica', 'arial', 'sans-serif';
-@textBgColor: @primaryColor;
 
 @secondaryBgColor: #898e93;
 @squareImageSize: 140px;
@@ -43,10 +47,10 @@ body {
     width: 100%;*/
 }
 h1{
-    color: white;
+    color: @fontColor;
 }
 h2{
-    color: white;
+    color: @fontColor;
 }
 .texture {
     background: url(img/diagonalStripe.png) repeat;
@@ -56,12 +60,12 @@ h2{
     top:0;
     left:0
 }
-.textColor{
+.fontColor{
     color: @secondaryColor;
 }
 p {
     color: @secondaryColor;
-}
+}   
 a {
     color: inherit !important;
     text-decoration: none;
@@ -237,6 +241,6 @@ a {
 }
 .plainButton:hover{
     background-color: @secondaryColor;
-    color: @secondaryBgColor;
+    color: white;
     outline: solid 1px @secondaryBgColor;
 }
