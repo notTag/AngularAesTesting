@@ -28,8 +28,10 @@ angular.module("app").controller('MacroCtrl', function($scope) {
 
     $scope.calculateProtein = function () {
         console.log("Protein Slider Val: " + $scope.protein.mod / 100);
-        $scope.protein.val = $scope.bodyWeight * ($scope.protein.mod/100);
-        $scope.protein.cals = $scope.protein.val * $scope.protein.calsPerGram;
+        var proteinGrams = Math.abs($scope.bodyWeight * ($scope.protein.mod/100));
+        $scope.protein.val = Math.round(proteinGrams*1000)/1000;
+        var proteinCals = $scope.protein.val * $scope.protein.calsPerGram;
+        $scope.protein.cals = Math.round(proteinCals*1000)/1000;
         
         console.log("Protein: " + $scope.protein);
     };

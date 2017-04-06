@@ -46,13 +46,13 @@
                     <td>Protein: </td>
                     <td>{{protein.val}} g</td>
                     <td>{{protein.cals}} cals</td>
-                    <td><input type="range" class="macroSlider" ng-model="protein.mod" min="0" max="200">{{protein.mod}}%</td>
+                    <td><input type="range" class="macroSlider" ng-model="protein.mod" ng-change="calculateMacros()" min="0" max="200">{{protein.mod}}%</td>
                 </tr>
                 <tr>  
                     <td>Fats: </td>
                     <td>{{fats.val}} g</td>
                     <td>{{fats.cals}} cals</td>
-                    <td><input type="range" class="macroSlider"  ng-model="fats.mod">{{fats.mod}}%</td>
+                    <td><input type="range" class="macroSlider"  ng-model="fats.mod" ng-change="calculateMacros()">{{fats.mod}}%</td>
                 <tr>
                     <td>Carbs: </td>
                     <td>{{carbs.val}} g</td>
