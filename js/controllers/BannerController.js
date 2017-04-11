@@ -1,7 +1,7 @@
 angular.module('app').controller('BannerCtlr', function ($scope) {
     $(function () {
         $(".typingBannerText").typed({
-            strings: ["nicktag.tech is currently under Maintenance. ", "Nick Tagliasacchi is getting ready for hire! ", "Nick Tagliasacchi "],
+            strings: ["nicktag.tech is currently under Maintenance. ", "Nick Tagliasacchi is getting ready for hire! ", "Nick Tagliasacchi's Sandbox "],
             typeSpeed: 50,
             loop: false,
             loopCount: 2,

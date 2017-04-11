@@ -6,7 +6,7 @@ angular.module('app').controller('JWPlayerCtlr', function($scope){
             height: 270,
             width: 480
         });
-    }
+    };
 });  
    
     

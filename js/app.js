@@ -1,28 +1,31 @@
 /* global angular */
-var app = angular.module('app', ['ngLess', "ngRoute", 'mdo-angular-cryptography']);
+var app = angular.module('app', ['ngLess', "ngRoute", 'mdo-angular-cryptography', 'ngParallax']);
 
 app.config(function ($routeProvider, $cryptoProvider, $locationProvider) {
     $routeProvider
-    .when("/", {
-        templateUrl : "html/ntst.html"
-    })
-    .when("/ntst", {
-        templateUrl : "html/ntst.html"
-    })
-    .when("/angularAES", {
-        templateUrl : "html/AngularAESTest.html"
-    })
-    .when("/bigIntFibonacci", {
-        templateUrl : "html/BigIntFibonacci.html"
-    })
-    .when("/macro", {
-        templateUrl : "html/MacroCalc.html"
-    })
-    .when("/conway", {
-        templateUrl : "html/ConwayGameOfLife.html"
-    });
+            .when("/", {
+                templateUrl: "html/ntst.html"
+            })
+            .when("/parallax", {
+                templateUrl: "html/parallax.html"
+            })
+            .when("/ntst", {
+                templateUrl: "html/ntst.html"
+            })
+            .when("/angularAES", {
+                templateUrl: "html/AngularAESTest.html"
+            })
+            .when("/bigIntFibonacci", {
+                templateUrl: "html/BigIntFibonacci.html"
+            })
+            .when("/macro", {
+                templateUrl: "html/MacroCalc.html"
+            })
+            .when("/conway", {
+                templateUrl: "html/ConwayGameOfLife.html"
+            });
 
-    $locationProvider.html5Mode(true); 
+    $locationProvider.html5Mode(true);
     $cryptoProvider.setCryptographyKey('ABCD123');
 });
 

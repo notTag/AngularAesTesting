@@ -1,0 +1,42 @@
+<div ng-controller="ParallaxCtlr" class="parallaxContainer">
+
+    <div class="parallaxText">
+        <h3>Languages</h3>
+
+        <label ng-repeat="skill in technicalSkills">{{skill}}, </label>
+    </div>
+    <div class='parallaxBackground'>
+        <div ng-parallax pattern="triangles" speed="0"></div>
+    </div>
+    <!--    <div class="parallaxText">
+            
+        </div>
+        <div class='parallaxBackground'>
+            <div ng-parallax pattern="triangles" speed="0"></div>
+        </div>-->
+    <div ng-repeat="qna in questionAndAnswer">
+        <div class="parallaxText">
+            <h3>{{qna.question}}</h3>
+            <label>{{qna.answer}}</label>
+        </div>
+        <div class='parallaxBackground'>
+            <div ng-parallax pattern="triangles" speed="0"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div ng-controller="ParallaxCtlr" ng-init="myPattern='img/white_folded_paper.png'">
+    <div class='box'>
+      <div ng-parallax pattern="myPattern" speed="0"  ><center>Speed: 0</center></div>
+    </div>
+    <div class='box'>
+      <div ng-parallax pattern="myPattern" speed="5" ><center>Speed: 5</center></div>
+    </div>
+    <div class='box'>
+      <div ng-parallax pattern="myPattern" speed="3"  ><center>Speed: 3</center></div>
+    </div>
+    <div class='box'>
+      <div ng-parallax pattern="myPattern" speed="1" ><center>Speed: 1</center></div>
+    </div>
+</div>-->

@@ -141,8 +141,6 @@ a {
 .content {
     /*background-color: @primaryColor;*/
     text-align: center;
-    padding-left: @pagePadding;
-    padding-right: @pagePadding;
 }
 .footer {
     /*background-color: @primaryColor;*/
@@ -150,6 +148,7 @@ a {
     line-height: 4em;
     text-align: center;
     clear: left;
+    padding-top: 15px;
 }
 /*.ntstIcon:hover{
     color: @secondaryColor;
@@ -183,7 +182,10 @@ a {
     }
 }
 .viewContainer{
-    padding:5px;
+    padding-top:10px;
+    padding-left: @pagePadding;
+    padding-right: @pagePadding;
+    padding-bottom: 10px;
 }
 .contentRowContainer{
     width: 45%;
@@ -243,4 +245,21 @@ a {
     background-color: @secondaryColor;
     color: white;
     outline: solid 1px @secondaryBgColor;
+    cursor: pointer;
+}
+.parallaxContainer{
+    height:100%;
+}
+.parallaxText{
+    color: white;
+    height: 150px;
+    padding-left: @pagePadding;
+    padding-right: @pagePadding;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.parallaxBackground{
+    height: 150px;
+    box-shadow: 0px 0px 8px 2px #000000;
+    filter: blur(3px) saturate(8);
 }
