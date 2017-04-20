@@ -29,6 +29,22 @@ angular.module('app').controller('ParallaxCtlr', function ($scope) {
 //    Object Oriented Design, MVC, HTML5, CSS, SOAP, REST, SQL, XML Library: JQuery, Highcharts, NumPy, OpenCV
 //    Framework: AngularJs
 
+}).directive('parallaxQuestionAnswer', function() {
+  return {
+    scope: { question:'@', 
+             answer:'@',
+             background: '@',
+             speed: '@'
+    },  
+    template: '<div class="parallaxText">' + 
+                    '<h3>{{question}}</h3>' +  
+                    '<label>{{answer}}</label>' + 
+                '</div>' + 
+                '<div class="parallaxBackground">' + 
+                    '<div ng-parallax pattern="background" speed="speed"></div>' + 
+                '</div>',
+    restrict: 'E'
+  };
 });
 
 
